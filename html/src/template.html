@@ -1,18 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-    <link inline rel="icon" type="image/png" href="favicon.png">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>The CLI tool for explaining commands from your terminal</title>
+    <!-- Search Engine -->
+    <meta name="description" content="The CLI tool for explaining commands from your terminal" />
+    <meta name="image" content="https://kmdr.sh/" />
+    <!-- Schema.org for Google -->
+    <meta itemprop="name" content="kmdr.sh" />
+    <meta itemprop="description" content="The CLI tool for explaining commands from your terminal" />
+    <meta itemprop="image" content="https://kmdr.sh/" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="kmdr.sh" />
+    <meta name="twitter:description" content="The CLI tool for explaining commands from your terminal" />
+    <meta name="twitter:site" content="@kmdr_sh" />
+    <meta name="twitter:creator" content="@ediardo" />
+    <meta name="twitter:image:src" content="https://kmdr.sh/screenshot.png" />
+    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <meta name="og:title" content="kmdr.sh" />
+    <meta name="og:description" content="The CLI tool for explaining commands from your terminal" />
+    <meta name="og:image" content="https://kmdr.sh/screenshot.png" />
+    <meta name="og:url" content="https://kmdr.sh/" />
+    <meta name="og:type" content="website" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="kmdr/img/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="kmdr/img/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="kmdr/img/icons/favicon-16x16.png" />
+    <link rel="manifest" href="https://kmdr.sh/site.webmanifest" />
+    <link rel="mask-icon" href="kmdr/img/icons/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#ffc40d" />
+    <meta name="theme-color" content="#ffffff" />
     <% for (const css in htmlWebpackPlugin.files.css) { %>
-    <link inline rel="stylesheet" src="<%= htmlWebpackPlugin.files.css[css] %>">
+    <link inline rel="stylesheet" src="<%= htmlWebpackPlugin.files.css[css] %>" />
     <% } %>
+    <link rel="stylesheet" href="https://kmdr.sh/css/main.css" />
+    <link rel="stylesheet" href="https://kmdr.sh/css/kmdr.css" />
 </head>
+
 <body>
-<script src="auth_token.js"></script>
-<% for (const js in htmlWebpackPlugin.files.js) { %>
-<script inline type="text/javascript" src="<%= htmlWebpackPlugin.files.js[js] %>"></script>
-<% } %>
+    <header class="header-05">
+        <nav class="nav-02" style="position: relative">
+            <div class="container container--large">
+                <div class="nav-02__box">
+                    <div class="nav-02__logo">
+                        <a class="nav-02__link" href="https://kmdr.sh/">
+                            <!--You can use image logo:--><img class="nav-02__logo_img" alt="Logo"
+                                src="https://kmdr.sh/kmdrlogo.png" />
+                            <!--Or uncomment this <span> to have a word-logo.-->
+                            <!--span.nav-02__logo_text.white-text
+                          | Unicorn
+                          
+                          --></a>
+                    </div>
+                    <div class="nav-02__links js-menu">
+                        <ul class="nav-02__list">
+                            <li class="nav-02__item">
+                                <a class="button button--black-outline button--empty" href="https://kmdr.sh/#install">
+                                    <span>Get it</span></a>
+                            </li>
+
+                            <li class="nav-02__item">
+                                <a class="button button--black-outline  button--accent-bg "
+                                    href="https://kmdr.sh/demo.html">
+                                    <span>Demo</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-02__item">
+                                <a class="button button--black-outline  button--empty "
+                                    href="https://kmdr.sh/#features">
+                                    <span>Features</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-02__item">
+                                <a class="button  button--black-outline  button--empty " href="https://kmdr.sh/#signup">
+                                    <span>Sign up</span>
+                                </a>
+                            </li>
+                            <li class="nav-02__item">
+                                <a class="button  button--black-outline  button--empty "
+                                    href="https://kmdr.sh/#contactus">
+                                    <span>Contact us</span>
+                                </a>
+                            </li>
+                            <li class="nav-02__item">
+                                <a class="button  button--black-outline  button--empty "
+                                    href="https://github.com/ediardo/kmdr.sh" target="_blank">
+                                    <span>Go to GitHub</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="nav-02__burger">
+                            <button class="burger burger--black js-open-menu" type="button">
+                                <div class="burger__box">
+                                    <div class="burger__inner"></div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <script src="auth_token.js"></script>
+    <div>
+        <% for (const js in htmlWebpackPlugin.files.js) { %>
+        <script inline type="text/javascript" src="<%= htmlWebpackPlugin.files.js[js] %>"></script>
+        <% } %>
+    </div>
 </body>
+
 </html>

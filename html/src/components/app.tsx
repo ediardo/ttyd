@@ -12,7 +12,7 @@ const protocol = window.location.protocol === 'https:' ? 'wss://' : 'ws://';
 const wsPath = window.location.pathname.endsWith('/') ? 'ws' : '/ws';
 const url = [protocol, window.location.host, window.location.pathname, wsPath, window.location.search].join('');
 const termOptions = {
-    fontSize: 13,
+    fontSize: 18,
     fontFamily: 'Menlo For Powerline,Consolas,Liberation Mono,Menlo,Courier,monospace',
     theme: {
         foreground: '#d2d2d2',

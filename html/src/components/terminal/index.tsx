@@ -64,6 +64,7 @@ export class Xterm extends Component<Props> {
             this.backoffLock = false;
             this.openTerminal();
         });
+
         this.backoff.on('backoff', (_, delay: number) => {
             console.log(`[ttyd] will attempt to reconnect websocket in ${delay}ms`);
             this.backoffLock = true;
@@ -190,10 +191,12 @@ export class Xterm extends Component<Props> {
             window.location.reload();
         }
 
+        /*
         // 1000: CLOSE_NORMAL
         if (event.code !== 1000) {
             this.reconnect();
         }
+        */
     }
 
     @bind
@@ -213,8 +216,8 @@ export class Xterm extends Component<Props> {
                 zmodemAddon.consume(data);
                 break;
             case Command.SET_WINDOW_TITLE:
-                this.title = textDecoder.decode(data);
-                document.title = this.title;
+                // this.title = textDecoder.decode(data);
+                // document.title = this.title;
                 break;
             case Command.SET_PREFERENCES:
                 const preferences = JSON.parse(textDecoder.decode(data));
